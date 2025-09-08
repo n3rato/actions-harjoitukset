@@ -1,0 +1,15 @@
+name: T05 - Push + PR
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  both:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say from push/PR
+        run: echo "Triggered by push or PR to main"
+
